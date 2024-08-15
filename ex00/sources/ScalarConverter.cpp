@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 22:29:14 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/08/16 00:11:25 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/08/16 01:29:38 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,21 @@ bool isChar(const std::string& str)
 
 std::string isFloatingPoint(const std::string& str)
 {
+	int f = 0;
+	int f_spot = str.length();
+	for (int i = 0; str[i]; i++)
+	{
+		if (str[i] == 'f' || str[i] == 'F')
+		{
+			f++;
+			f_spot = i + 1;
+		}
+		if (((str[i] < '0' || str[i] > '9') && str[i] != '.' && str[i] != 'f' && str[i] != 'F') || f > 1 || str[f_spot] != '\0')
+		{
+			std::cerr << "Invalid value" << std::endl;
+			std::exit(EXIT_FAILURE);
+		}
+	}
 	for (int i = 0; str[i]; i++)
 	{
 		if (str[i] == '.' && (str[i + 1] >= '0' && str[i + 1] <= '9'))
@@ -156,3 +171,4 @@ void ScalarConverter::convert(const std::string& str)
 	else
 		std::exit(EXIT_FAILURE);
 }
+
