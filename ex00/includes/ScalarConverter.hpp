@@ -2,6 +2,11 @@
 
 #include <iostream>
 #include <sstream>
+#include <cmath>
+#include <limits>
+#include <cstdlib>
+#include <bitset>
+#include <iomanip>
 
 class ScalarConverter {
 
