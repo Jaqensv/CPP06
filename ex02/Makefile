@@ -1,6 +1,6 @@
 NAME = main
 SOURCES = 	main.cpp \
-			Serializer.cpp \
+			sources/Base.cpp \
 
 OBJECTS = $(SOURCES:.cpp=.o)
 

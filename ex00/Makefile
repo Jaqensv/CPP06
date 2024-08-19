@@ -16,10 +16,10 @@ ${NAME}: ${OBJECTS}
 	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	@rm -f ${OBJECTS} _shrubbery
+	@rm -f ${OBJECTS}
 	
 fclean: clean
-	@rm -f ${NAME} _shrubbery
+	@rm -f ${NAME}
 
 re: fclean all
 
