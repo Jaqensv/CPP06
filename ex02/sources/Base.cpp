@@ -6,7 +6,7 @@
 /*   By: mde-lang <mde-lang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 02:17:43 by mde-lang          #+#    #+#             */
-/*   Updated: 2024/08/19 05:35:15 by mde-lang         ###   ########.fr       */
+/*   Updated: 2024/08/20 09:40:29 by mde-lang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 #include "../includes/C.hpp"
 
 Base::~Base() {}
-
-std::string Base::getType() const {return this->_type;}
 
 Base* Base::generate()
 {
