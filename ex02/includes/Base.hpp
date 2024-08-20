@@ -19,5 +19,4 @@ public:
 		const char* what() const throw() {
 		return "Error: nullptr"; }
 	};
-
 };
